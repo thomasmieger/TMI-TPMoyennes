@@ -58,12 +58,12 @@ namespace TMI_TPMoyennes
         public virtual double moyenneMatiere(int matiere)
         {
             var moyenne = eleves.Select(e => e.moyenneMatiere(matiere));
-            return moyenne.Any() ? Math.Round(moyenne.Average(), 2) : 0.0;
+            return moyenne.Any() ? Math.Round(moyenne.Average(), 2) : 10.0;
         }
         public virtual double moyenneGeneral()
         {
             var moyenne = matieres.Keys.Select(moyenneMatiere);
-            return moyenne.Any() ? Math.Round(moyenne.Average(), 2) : 0.0;
+            return moyenne.Any() ? Math.Round(moyenne.Average(), 2) : 10.0;
         }
     }
 }
